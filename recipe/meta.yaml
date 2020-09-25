@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: e120b39007faa8e50a78dbc934187a0571bff35594f9dcaee7a77bf0bd11100a
+  sha256: df03ca9e4479f551b611609e29e7bb7bdb32e3a85e2ec7c5a52ea1fe1400fcc5
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
