@@ -1,42 +1,47 @@
-{% set name = "FLORIS" %}
+{% set name = "floris" %}
 {% set version = "2.4" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/NREL/FLORIS/archive/v{{ version }}.tar.gz
-  sha256: b425f316f7031cbdcb3f0281786335174ea0225fd0813e8d56914b8aeb91bea8
-  # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/FLORIS-{{ version }}.tar.gz
+  sha256: 3f1e7cb33e83edc373aa021d463de2ade435226c68a16c86f491070463a05044
 
 build:
   number: 1
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
-
   run:
-    - coloredlogs
-    - matplotlib-base
-    - numpy
-    - pandas
-    - pyproj
-    - pytest
-    - python
-    - scipy
-    - seaborn
+    - python >=3.6
+    - coloredlogs >=10.0
+    - matplotlib-base >=3
+    - numpy >=1.16
+    - pandas >=0.24
+    - pyproj >=2.1
+    - pytest >=4
+    - scipy >=1.1
+    - seaborn >=0.9
+    - shapely >=1.7.1
     - scikit-learn
-    - shapely
 
 test:
   imports:
     - floris
     - floris.simulation
     - floris.tools
+  # has a bogus defined dep on sklearn instead of scikit-learn
+  # commands:
+  #   - pip check
+  # requires:
+  #   - pip
 
 about:
   home: https://github.com/NREL/FLORIS
