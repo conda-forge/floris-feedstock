@@ -11,7 +11,7 @@ Summary: A controls-oriented engineering wake model.
 
 Development: https://github.com/NREL/FLORIS
 
-Documentation: https://floris.readthedocs.io
+Documentation: https://nrel.github.io/floris
 
 Current build status
 ====================
