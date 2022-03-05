@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/FLORIS-{{ version }}.tar.gz
-  sha256: 71c5b545ef37db1b6896ea71831b79e8c4963e2aac87a673fdeacb9e28c26038
+  url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
+  sha256: ab4b0e13d8d8fe63100553b39db759c2a834d77ff32abc11fa4febf523fd5175
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
