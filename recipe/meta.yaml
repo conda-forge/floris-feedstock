@@ -1,5 +1,5 @@
 {% set name = "floris" %}
-{% set version = "2.4" %}
+{% set version = "3.0" %}
 
 
 package:
@@ -7,30 +7,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/FLORIS-{{ version }}.tar.gz
-  sha256: 3f1e7cb33e83edc373aa021d463de2ade435226c68a16c86f491070463a05044
+  url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
+  sha256: ab4b0e13d8d8fe63100553b39db759c2a834d77ff32abc11fa4febf523fd5175
+  # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
+    - attrs >=21.3
     - coloredlogs >=10.0
     - matplotlib-base >=3
-    - numpy >=1.16
+    - numexpr >=2.7
+    - numpy >=1.20
     - pandas >=0.24
-    - pyproj >=2.1
-    - pytest >=4
+    - pyyaml >=5.3
     - scipy >=1.1
-    - seaborn >=0.9
     - shapely >=1.7.1
-    - scikit-learn
 
 test:
   imports:
@@ -49,7 +49,7 @@ about:
   license_family: APACHE
   license_file: LICENSE.txt
   summary: A controls-oriented engineering wake model.
-  doc_url: https://floris.readthedocs.io
+  doc_url: https://nrel.github.io/floris
   dev_url: https://github.com/NREL/FLORIS
 
 extra:
