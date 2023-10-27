@@ -24,6 +24,7 @@ requirements:
     - python >=3.8
     - attrs >=21.3
     - coloredlogs >=10.0
+    - flatten_dict >= 0.4
     - matplotlib-base >=3
     - numexpr >=2.7
     - numpy >=1.20
