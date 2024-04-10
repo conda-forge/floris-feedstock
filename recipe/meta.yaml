@@ -24,12 +24,11 @@ requirements:
     - python >=3.8
     - attrs >=21.3
     - coloredlogs >=10.0
-    - flatten-dict >=0.4
     - matplotlib-base >=3
     - numexpr >=2.7
     - numpy >=1.20
     - pandas >=0.24
-    - pyyaml >=5.3
+    - pyyaml >=6.0
     - scipy >=1.1
     - shapely >=1.7.1
 
