@@ -35,8 +35,6 @@ requirements:
 test:
   imports:
     - floris
-    - floris.simulation
-    - floris.tools
   # has a bogus defined dep on sklearn instead of scikit-learn
   # commands:
   #   - pip check
