@@ -148,6 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@bayc](https://github.com/bayc/)
+* [@misi9170](https://github.com/misi9170/)
 * [@rafmudaf](https://github.com/rafmudaf/)
-* [@rhammond2](https://github.com/rhammond2/)
 

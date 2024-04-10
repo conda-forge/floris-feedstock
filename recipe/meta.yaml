@@ -1,5 +1,5 @@
 {% set name = "floris" %}
-{% set version = "3.6" %}
+{% set version = "4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
-  sha256: ece37264c615012be5dddbe8cfdd7dcd659c18e030e9a09e59d30f15462af290
+  sha256: 4e03badf64138620eb7fe56909f1730086392c08c3ecf20770fa26a4d92a8fee
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
@@ -24,20 +24,17 @@ requirements:
     - python >=3.8
     - attrs >=21.3
     - coloredlogs >=10.0
-    - flatten-dict >=0.4
     - matplotlib-base >=3
     - numexpr >=2.7
     - numpy >=1.20
     - pandas >=0.24
-    - pyyaml >=5.3
+    - pyyaml >=6.0
     - scipy >=1.1
     - shapely >=1.7.1
 
 test:
   imports:
     - floris
-    - floris.simulation
-    - floris.tools
   # has a bogus defined dep on sklearn instead of scikit-learn
   # commands:
   #   - pip check
@@ -57,4 +54,4 @@ extra:
   recipe-maintainers:
     - rafmudaf
     - bayc
-    - rhammond2
+    - misi9170
