@@ -1,5 +1,5 @@
 {% set name = "floris" %}
-{% set version = "4.1" %}
+{% set version = "4.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
-  sha256: beeebefec9d6882511b36533d81ba1e6d185a4bff80a21b8968cec8f11b10c6f
+  sha256: 496fd204488b1942a6d8b96b9ba3c8c614ea5cc00b9f83aedb7afe18a6ced986
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
