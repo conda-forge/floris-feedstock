@@ -12,7 +12,7 @@ source:
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,17 +20,19 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - python >=3.8
     - attrs >=21.3
-    - coloredlogs >=10.0
+    - coloredlogs >=15.0
     - matplotlib-base >=3
     - numexpr >=2.7
     - numpy >=1.20
-    - pandas >=0.24
+    - pandas >=2.0
+    - pathos >=0.3
     - pyyaml >=6.0
     - scipy >=1.1
-    - shapely >=1.7.1
+    - shapely >=2.0
 
 test:
   imports:
