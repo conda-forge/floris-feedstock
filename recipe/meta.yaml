@@ -43,6 +43,7 @@ test:
     # - pip
     - pytest
   source_files:
+    - examples
     - tests
   commands:
     - pytest tests
