@@ -43,7 +43,8 @@ test:
     # - pip
     - pytest
   source_files:
-    - examples
+    - floris/turbine_library/iea_15MW_multi_dim_Tp_Hs.csv
+    - examples/examples_wind_resource_grid/wrg_example.wrg
     - tests
   commands:
     - pytest tests
