@@ -37,11 +37,15 @@ requirements:
 test:
   imports:
     - floris
-  # has a bogus defined dep on sklearn instead of scikit-learn
-  # commands:
-  #   - pip check
-  # requires:
-  #   - pip
+  commands:
+    - pip check
+  requires:
+    # - pip
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pytest tests
 
 about:
   home: https://github.com/NREL/FLORIS
