@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - attrs >=21.3
     - coloredlogs >=15.0
     - matplotlib-base >=3
@@ -35,6 +35,8 @@ requirements:
     - shapely >=2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - floris
   # has a bogus defined dep on sklearn instead of scikit-learn
