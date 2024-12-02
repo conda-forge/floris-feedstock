@@ -12,7 +12,7 @@ source:
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -43,7 +43,7 @@ test:
     # - pip
     - pytest
   source_files:
-    - floris/turbine_library/iea_15MW_multi_dim_Tp_Hs.csv
+    - floris/floris/turbine_library/iea_15MW_multi_dim_Tp_Hs.csv
     - examples/examples_wind_resource_grid/wrg_example.wrg
     - tests
   commands:
