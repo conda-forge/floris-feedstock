@@ -1,5 +1,6 @@
 {% set name = "floris" %}
-{% set version = "4.2.1" %}
+{% set version = "4.2.2" %}
+{% set python_min = "3.8" %}
 
 
 package:
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
-  sha256: 53da5e9437ca3b8e3706aab15c43b71e89e9547bc30cc972d09895d75c13b463
+  sha256: 7e705be7dee3b6100165d797c2aaf89bb8ba748320b01cdff0f60662ad7831b6
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - attrs >=21.3
     - coloredlogs >=15.0
     - matplotlib-base >=3
@@ -35,13 +36,13 @@ requirements:
     - shapely >=2.0
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pytest
   imports:
     - floris
   commands:
     - pip check
-  requires:
-    # - pip
-    - pytest
   source_files:
     - floris/floris/turbine_library/iea_15MW_multi_dim_Tp_Hs.csv
     - examples/examples_wind_resource_grid/wrg_example.wrg
