@@ -25,15 +25,15 @@ requirements:
   run:
     - python >={{ python_min }}
     - attrs >=21.3
-    - coloredlogs >=15.0
-    - matplotlib-base >=3
-    - numexpr >=2.7
+    - coloredlogs ~=15.0
+    - matplotlib-base ~=3.0
+    - numexpr ~=2.7
     - numpy ~=2.0
-    - pandas >=2.0
-    - pathos >=0.3
-    - pyyaml >=6.0
-    - scipy >=1.1
-    - shapely >=2.0
+    - pandas ~=2.0
+    - pathos ~=0.3
+    - pyyaml ~=6.0
+    - scipy ~=1.1
+    - shapely ~=2.0
 
 test:
   requires:
