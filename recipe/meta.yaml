@@ -1,6 +1,6 @@
 {% set name = "floris" %}
-{% set version = "4.2.2" %}
-{% set python_min = "3.8" %}
+{% set version = "4.3" %}
+{% set python_min = "3.9" %}
 
 
 package:
@@ -28,7 +28,7 @@ requirements:
     - coloredlogs >=15.0
     - matplotlib-base >=3
     - numexpr >=2.7
-    - numpy >=1.20
+    - numpy >=2.0
     - pandas >=2.0
     - pathos >=0.3
     - pyyaml >=6.0
@@ -47,8 +47,8 @@ test:
 
 about:
   home: https://github.com/NREL/FLORIS
-  license: Apache-2.0
-  license_family: APACHE
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE.txt
   summary: A controls-oriented engineering wake model.
   doc_url: https://nrel.github.io/floris
