@@ -1,6 +1,6 @@
 {% set name = "floris" %}
-{% set version = "4.2.2" %}
-{% set python_min = "3.8" %}
+{% set version = "4.3" %}
+{% set python_min = "3.9" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
-  sha256: 7e705be7dee3b6100165d797c2aaf89bb8ba748320b01cdff0f60662ad7831b6
+  sha256: 01f497ba092b3545695f19ff6a29087622f28259d6eac5d621a6047d2bd198e7
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
@@ -25,19 +25,19 @@ requirements:
   run:
     - python >={{ python_min }}
     - attrs >=21.3
-    - coloredlogs >=15.0
-    - matplotlib-base >=3
-    - numexpr >=2.7
-    - numpy >=1.20
-    - pandas >=2.0
-    - pathos >=0.3
-    - pyyaml >=6.0
-    - scipy >=1.1
-    - shapely >=2.0
+    - coloredlogs ~=15.0
+    - matplotlib-base ~=3.0
+    - numexpr ~=2.7
+    - numpy ~=2.0
+    - pandas ~=2.0
+    - pathos ~=0.3
+    - pyyaml ~=6.0
+    - scipy ~=1.1
+    - shapely ~=2.0
 
 test:
   requires:
-  - python {{ python_min }}
+    - python {{ python_min }}
   #   - pip
   imports:
     - floris
@@ -47,8 +47,8 @@ test:
 
 about:
   home: https://github.com/NREL/FLORIS
-  license: Apache-2.0
-  license_family: APACHE
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE.txt
   summary: A controls-oriented engineering wake model.
   doc_url: https://nrel.github.io/floris
