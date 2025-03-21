@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/floris-feedstoc
 
 Home: https://github.com/NREL/FLORIS
 
-Package license: Apache-2.0
+Package license: BSD-3-Clause
 
 Summary: A controls-oriented engineering wake model.
 
