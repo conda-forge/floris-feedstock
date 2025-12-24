@@ -1,6 +1,6 @@
 {% set name = "floris" %}
 {% set version = "4.6" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 
 
 package:
