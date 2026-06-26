@@ -1,5 +1,5 @@
 {% set name = "floris" %}
-{% set version = "4.6.5" %}
+{% set version = "4.6.6" %}
 {% set python_min = "3.10" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/NREL/floris/archive/v{{ version }}.tar.gz
-  sha256: d637e8a0899fae8b5bb328937b1a8f5364faa500d6a82a2db72f64046eaf434e
+  sha256: c233027f8ef7e66c9f865fb461fe5f662819dcafd80840ec923452fff2a30965
   # Download the tar-ball and do `openssl sha256 file.tar.gz` to update
 
 build:
